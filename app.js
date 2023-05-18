@@ -61,13 +61,13 @@ app.post("/failure", function(req,res){
   res.redirect("/");
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
 
 // mailchimp API key
-// e07b21edeb371fb654365fb73fb4c046-us21
+// 82315bfe3de2b9ed09e501e03bc2ab49-us21
 
 //audience id 
 // c11ffe20a7
