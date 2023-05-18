@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 // const request = require("request");
 const https = require("https");
 const app = express()
+require('dotenv').config()
 const port = 3000
 
 app.use(express.static("public"));
@@ -36,7 +37,7 @@ app.post("/", (req,res)=>{
 
   const options = {
      method: "POST",
-     auth: "harshith:e07b21edeb371fb654365fb73fb4c046-us21"
+     auth: `harshith:${process.env.API_KEY}`
   }
 
   const request = https.request(url,options,function(response){
